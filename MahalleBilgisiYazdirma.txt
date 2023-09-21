@@ -1,0 +1,7 @@
+var fsbolge = FeatureSetByName($datastore,"mahalle",["AD"])
+var fskesisim = Intersects(fsbolge,$feature)
+var bolgeler = First(fskesisim)
+
+if (bolgeler == null) return {"errorMessage": "attığınız talep mahalle bulamadı ! "}
+
+return bolgeler.AD 

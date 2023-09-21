@@ -1,0 +1,7 @@
+var fsbolge = FeatureSetByName($datastore,"ilce",["AD"])
+var fskesisim = Intersects(fsbolge,$feature)
+var bolgeler = First(fskesisim)
+
+if (bolgeler == null) return {"errorMessage": "attığınız talep ilce bulamadı ! "}
+
+return bolgeler.AD 
